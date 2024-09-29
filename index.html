@@ -22,31 +22,31 @@
         </tr>
         <tr class="t1">
             <td>Task 1</td>
-            <td id="9-28">gumo <input type="checkbox"></td>
-            <td id="9-29">b</td>
-            <td id="9-30">b</td>
-            <td id="10-1">b</td>
+            <td id="9-28">$</td>
+            <td id="9-29">$</td>
+            <td id="9-30">$</td>
+            <td id="10-1">$</td>
         </tr>
         <tr class="t2">
             <td>Task 2</td>
-            <td id="9-28">gumo <input type="checkbox"></td>
-            <td id="9-29">b</td>
-            <td id="9-30">b</td>
-            <td id="10-1">b</td>
+            <td id="9-28">$</td>
+            <td id="9-29">$</td>
+            <td id="9-30">$</td>
+            <td id="10-1">$</td>
         </tr>
         <tr class="t3">
             <td>Task 3</td>
-            <td id="9-28">gumo <input type="checkbox"></td>
-            <td id="9-29">b</td>
-            <td id="9-30">b</td>
-            <td id="10-1">b</td>
+            <td id="9-28">$</td>
+            <td id="9-29">$</td>
+            <td id="9-30">$</td>
+            <td id="10-1">$</td>
         </tr>
         <tr class="t4">
             <td>Task 4</td>
-            <td id="9-28">gumo <input type="checkbox"></td>
-            <td id="9-29">b</td>
-            <td id="9-30">b</td>
-            <td id="10-1">b</td>
+            <td id="9-28">$</td>
+            <td id="9-29">$</td>
+            <td id="9-30">$</td>
+            <td id="10-1">$</td>
         </tr>
     </table>
 
@@ -71,6 +71,14 @@
 
             <!-- Hidden input for selected date -->
             <input type="hidden" id="taskDate">
+
+            <button type="button" onclick="setTaskNum('1')">September 28th</button>
+            <button type="button" onclick="setTaskNum('2')">September 29th</button>
+            <button type="button" onclick="setTaskNum('3')">September 30th</button>
+            <button type="button" onclick="setTaskNum('4')">October 1st</button>
+
+            <!-- Hidden input for selected date -->
+            <input type="hidden" id="taskNum">
 
             <!-- Input for task description -->
             <input type="text" id="taskDescription" placeholder="Enter task description">
