@@ -6,11 +6,11 @@
     <title>Calendar</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id = "timer">25:00</div>
+    <div id="timer">25:00</div>
     <script src="script.js"></script>
     <table>
         <tr id="days">
@@ -21,54 +21,61 @@
             <th>October 1st</th>
         </tr>
         <tr class="t1">
-            <td id="tasknum">Task 1</td>
-            <td id="9-28">gumo<input type="checkbox"></td>
+            <td>Task 1</td>
+            <td id="9-28">gumo <input type="checkbox"></td>
             <td id="9-29">b</td>
             <td id="9-30">b</td>
             <td id="10-1">b</td>
         </tr>
         <tr class="t2">
-            <td id="tasknum">Task 2</td>
-            <td id="9-28">gumo<input type="checkbox"></td>
+            <td>Task 2</td>
+            <td id="9-28">gumo <input type="checkbox"></td>
             <td id="9-29">b</td>
             <td id="9-30">b</td>
             <td id="10-1">b</td>
         </tr>
         <tr class="t3">
-            <td id="tasknum">Task 3</td>
-            <td id="9-28">gumo<input type="checkbox"></td>
+            <td>Task 3</td>
+            <td id="9-28">gumo <input type="checkbox"></td>
             <td id="9-29">b</td>
             <td id="9-30">b</td>
             <td id="10-1">b</td>
         </tr>
         <tr class="t4">
-            <td id="tasknum">Task 4</td>
-            <td id="9-28">gumo<input type="checkbox"></td>
+            <td>Task 4</td>
+            <td id="9-28">gumo <input type="checkbox"></td>
             <td id="9-29">b</td>
             <td id="9-30">b</td>
             <td id="10-1">b</td>
         </tr>
     </table>
+
+    <!-- Dropdown for task categories -->
     <div class="dropdown">
         <button class="dropbtn">Dropdown</button>
         <div class="dropdown-content">
-          <a onclick="studyTimer()">Assignment</a>
-          <a href="#">Test</a>
-          <a href="#">Project</a>
+            <a onclick="studyTimer()">Assignment</a>
+            <a href="#">Test</a>
+            <a href="#">Project</a>
         </div>
-      </div>
-      <div class="task-creator">
-        <form id="creator">
-            <button for="taskDate" value="9-28">September 28th</button>
-            <button for="taskDate" value="9-29">September 29th</button>
-            <button for="taskDate" value="9-30">September 30th</button>
-            <button for="taskDate" value="10-1">October 1st</button>
-            <input type="text">
-            <input type="submit">
-        </form>
-      </div>
-      <div class="task-destroyer"></div>
+    </div>
 
-      </div>
+    <!-- Task Creator -->
+    <div class="task-creator">
+        <form id="creator">
+            <!-- Buttons to select task date -->
+            <button type="button" onclick="setTaskDate('9-28')">September 28th</button>
+            <button type="button" onclick="setTaskDate('9-29')">September 29th</button>
+            <button type="button" onclick="setTaskDate('9-30')">September 30th</button>
+            <button type="button" onclick="setTaskDate('10-1')">October 1st</button>
+
+            <!-- Hidden input for selected date -->
+            <input type="hidden" id="taskDate">
+
+            <!-- Input for task description -->
+            <input type="text" id="taskDescription" placeholder="Enter task description">
+            <input type="submit" value="Create Task">
+        </form>
+    </div>
 </body>
 </html>
