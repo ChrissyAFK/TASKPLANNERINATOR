@@ -6,6 +6,8 @@ function studyTimer() {
     let timeRemaining = workDuration;
     let timerInterval;
 
+    const timerDisplay = document.getElementById('timer');
+
     function startTimer() {
         timerInterval = setInterval(updateTimer, 1000);
     }
@@ -13,7 +15,7 @@ function studyTimer() {
     function updateTimer() {
         const minutes = Math.floor(timeRemaining / 60);
         const seconds = timeRemaining % 60;
-        console.log(`${minutes}:${seconds < 10 ? '0' : ''}${seconds}`);
+        timerDisplay.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
         
         if (timeRemaining > 0) {
             timeRemaining--;
