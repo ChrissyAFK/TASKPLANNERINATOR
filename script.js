@@ -43,6 +43,6 @@ document.getElementById('taskForm').addEventListener('submit', function(event) {
 });
 
 function createTask(taskDate, taskDescription) {
-    const taskDisplay = document.getElementById('taskDisplay');
-    taskDisplay.innerHTML = `<p>Date: ${taskDate}</p><p>Task: ${taskDescription}</p><input type='checkbox'>`;
+    const taskElement = document.getElementById('9-28');
+    taskElement.innerHTML = `<p>Date: ${taskDate}</p><p>Task: ${taskDescription}</p><input type='checkbox'>`;
 }
