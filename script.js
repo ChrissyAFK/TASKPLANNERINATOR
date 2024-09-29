@@ -43,6 +43,19 @@ document.getElementById('taskForm').addEventListener('submit', function(event) {
 });
 
 function createTask(taskDate, taskDescription) {
-    const taskElement = document.getElementById('9-28');
-    taskElement.innerHTML = `<p>Date: ${taskDate}</p><p>Task: ${taskDescription}</p><input type='checkbox'>`;
+    const dateId = formatDateId(taskDate);
+    const taskCell = document.getElementById(dateId);
+
+    if (taskCell) {
+        taskCell.innerHTML = `${taskDescription} <input type='checkbox'>`;
+    } else {
+        console.error(`No cell found for date ID: ${dateId}`);
+    }
+}
+
+function formatDateId(dateString) {
+    const date = new Date(dateString);
+    const month = date.getMonth() + 1; // Months are zero-based
+    const day = date.getDate();
+    return `${month}-${day}`;
 }
