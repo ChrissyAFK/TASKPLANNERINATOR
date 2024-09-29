@@ -33,4 +33,16 @@ function studyTimer() {
 
     startTimer();
 }
+document.getElementById('taskForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form from submitting the traditional way
 
+    const taskDate = document.getElementById('taskDate').value;
+    const taskDescription = document.getElementById('taskDescription').value;
+
+    createTask(taskDate, taskDescription);
+});
+
+function createTask(taskDate, taskDescription) {
+    const taskDisplay = document.getElementById('taskDisplay');
+    taskDisplay.innerHTML = `<p>Date: ${taskDate}</p><p>Task: ${taskDescription}</p><input type='checkbox'>`;
+}
