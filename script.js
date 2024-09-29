@@ -66,10 +66,10 @@ document.addEventListener('DOMContentLoaded', function () {
    // Function to create task in the calendar
 function createTask(taskDate, taskNum, taskDescription) {
     // Find the correct table row (task number)
-    const taskRow = document.querySelector(`.t${taskNum}`); // Select the correct task row
-
+    const taskRow = document.getElementsByClassName(taskNum); // Select the correct task row
+    console.log(taskRow);
     // Use getElementById directly
-    const taskCell = document.getElementById(taskDate); // This will work fine since you're using getElementById
+    const taskCell = taskRow["children"].getElementById(taskDate); // This will work fine since you're using getElementById
 
     if (taskCell) {
         taskCell.innerHTML = `${taskDescription} <input type='checkbox'>`;
