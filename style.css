@@ -4,3 +4,15 @@ th, td{
     padding-top: 30px;
     padding-bottom: 30px;
 }
+body {
+    color: #e7ecef
+}
+button {
+    color:#D81E5B
+}
+table {
+    color: #8b8c98;
+}
+div {
+    background-color: #A3CEF1;
+}
