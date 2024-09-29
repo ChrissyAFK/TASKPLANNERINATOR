@@ -57,6 +57,17 @@ div {
   
   /* Change the background color of the dropdown button when the dropdown content is shown */
   .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+.days{
+    font-family: "Itim";
+    font-size:30px;
+    padding:10px;
+}
+.tasknum{
+    font-family: "Itim";
+    font-size:20px;
+    padding:10px;
+}
   .itim-regular {
     font-family: "Itim", cursive;
     font-weight: 400;
