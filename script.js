@@ -12,8 +12,8 @@ function setTaskNum(taskNum) {
 document.addEventListener('DOMContentLoaded', function () {
     // Pomodoro Timer
     function studyTimer() {
-        const workDuration = 25 * 60; // 25 minutes
-        const breakDuration = 5 * 60; // 5 minutes
+        const workDuration = 25 * 60; 
+        const breakDuration = 5 * 60;
 
         let isWorkPeriod = true;
         let timeRemaining = workDuration;
@@ -61,21 +61,24 @@ document.addEventListener('DOMContentLoaded', function () {
             console.error('Please select a date, task number, and enter a task description.');
         }
     });
+    function createTask(taskDate, taskNum, taskDescription) {
+        const taskRow = document.querySelector(`.${taskNum}`); 
+        if (!taskRow) {
+            console.error(`No row found for task number: ${taskNum}`);
+            return;
+        }
 
-    // Function to create task in the calendar
-   // Function to create task in the calendar
-function createTask(taskDate, taskNum, taskDescription) {
-    // Find the correct table row (task number)
-    const taskRow = document.getElementsByClassName(taskNum); // Select the correct task row
-    console.log(taskRow);
-    // Use getElementById directly
-    const taskCell = taskRow["children"].getElementById(taskDate); // This will work fine since you're using getElementById
+        const taskCell = taskRow.querySelector(`[id='${taskDate}']`); 
+        if (!taskCell) {
+            console.error(`No cell found for date: ${taskDate} and task number: ${taskNum}`);
+            return;
+        }
 
-    if (taskCell) {
-        taskCell.innerHTML = `${taskDescription} <input type='checkbox'>`;
-    } else {
-        console.error(`No cell found for date: ${taskDate} and task number: ${taskNum}`);
+        taskCell.innerHTML = ''; 
+        const taskList = document.createElement('ul');
+        const taskItem = document.createElement('li');
+        taskItem.innerHTML = `${taskDescription} <input type='checkbox'>`;
+        taskList.appendChild(taskItem);
+        taskCell.appendChild(taskList);
     }
-}
-
 });

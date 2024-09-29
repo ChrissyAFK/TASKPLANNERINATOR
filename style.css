@@ -80,3 +80,7 @@ div {
   .task-creator button{
     display:inline-block;
   }
+  ul {
+    list-style-type: none;
+    padding: 0;
+}
