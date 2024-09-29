@@ -3,6 +3,11 @@ function setTaskDate(date) {
     document.getElementById('taskDate').value = date;
 }
 
+// Define setTaskNum globally
+function setTaskNum(taskNum) {
+    document.getElementById('taskNum').value = taskNum;
+}
+
 // Run the rest of the script when DOM is fully loaded
 document.addEventListener('DOMContentLoaded', function () {
     // Pomodoro Timer
@@ -47,23 +52,30 @@ document.addEventListener('DOMContentLoaded', function () {
         event.preventDefault(); // Prevent form from submitting the traditional way
 
         const taskDate = document.getElementById('taskDate').value;
+        const taskNum = document.getElementById('taskNum').value;
         const taskDescription = document.getElementById('taskDescription').value;
 
-        if (taskDate && taskDescription) {
-            createTask(taskDate, taskDescription);
+        if (taskDate && taskNum && taskDescription) {
+            createTask(taskDate, taskNum, taskDescription);
         } else {
-            console.error('Please select a date and enter a task description.');
+            console.error('Please select a date, task number, and enter a task description.');
         }
     });
 
     // Function to create task in the calendar
-    function createTask(taskDate, taskDescription) {
-        const taskCell = document.getElementById(taskDate);
+   // Function to create task in the calendar
+function createTask(taskDate, taskNum, taskDescription) {
+    // Find the correct table row (task number)
+    const taskRow = document.querySelector(`.t${taskNum}`); // Select the correct task row
 
-        if (taskCell) {
-            taskCell.innerHTML = `${taskDescription} <input type='checkbox'>`;
-        } else {
-            console.error(`No cell found for date ID: ${taskDate}`);
-        }
+    // Use getElementById directly
+    const taskCell = document.getElementById(taskDate); // This will work fine since you're using getElementById
+
+    if (taskCell) {
+        taskCell.innerHTML = `${taskDescription} <input type='checkbox'>`;
+    } else {
+        console.error(`No cell found for date: ${taskDate} and task number: ${taskNum}`);
     }
+}
+
 });
