@@ -16,3 +16,13 @@ table {
 div {
     background-color: #A3CEF1;
 }
+.dd-ct {
+    display: none;
+    position: absolute;
+}
+.dd:hover .dd-ct{
+    display: block;
+}
+#event{
+    padding:20px;
+}
