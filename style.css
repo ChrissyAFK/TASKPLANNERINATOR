@@ -3,6 +3,7 @@ th, td{
     padding-right: 100px;
     padding-top: 30px;
     padding-bottom: 30px;
+    border:lightblue, solid;
 }
 body {
     color: #e7ecef
@@ -62,6 +63,7 @@ div {
     font-family: "Itim";
     font-size:30px;
     padding:10px;
+    max-width:200px;
 }
 .tasknum{
     font-family: "Itim";
