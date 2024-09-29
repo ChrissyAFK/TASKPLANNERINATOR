@@ -32,4 +32,3 @@ function studyTimer() {
     startTimer();
 }
 
-studyTimer();
