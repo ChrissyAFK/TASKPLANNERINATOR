@@ -13,40 +13,40 @@
     <div id = "timer">25:00</div>
     <script src="script.js"></script>
     <table>
-        <tr class="days">
+        <tr id="days">
             <th></th>
             <th>September 28th</th>
             <th>September 29th</th>
             <th>September 30th</th>
             <th>October 1st</th>
         </tr>
-        <tr>
-            <td class="tasknum">Task 1</td>
-            <td>b</td>
-            <td>b</td>
-            <td>b</td>
-            <td>b</td>
+        <tr class="t1">
+            <td id="tasknum">Task 1</td>
+            <td id="9-28">gumo<input type="checkbox"></td>
+            <td id="9-29">b</td>
+            <td id="9-30">b</td>
+            <td id="10-1">b</td>
         </tr>
-        <tr>
-            <td class="tasknum">Task 2</td>
-            <td>c</td>
-            <td>c</td>
-            <td>c</td>
-            <td>c</td>
+        <tr class="t2">
+            <td id="tasknum">Task 2</td>
+            <td id="9-28">gumo<input type="checkbox"></td>
+            <td id="9-29">b</td>
+            <td id="9-30">b</td>
+            <td id="10-1">b</td>
         </tr>
-        <tr>
-            <td class="tasknum">Task 3</td>
-            <td>d</td>
-            <td>d</td>
-            <td>d</td>
-            <td>d</td>
+        <tr class="t3">
+            <td id="tasknum">Task 3</td>
+            <td id="9-28">gumo<input type="checkbox"></td>
+            <td id="9-29">b</td>
+            <td id="9-30">b</td>
+            <td id="10-1">b</td>
         </tr>
-        <tr>
-            <td class="tasknum">Task 4</td>
-            <td>e</td>
-            <td>e</td>
-            <td>e</td>
-            <td>e</td>
+        <tr class="t4">
+            <td id="tasknum">Task 4</td>
+            <td id="9-28">gumo<input type="checkbox"></td>
+            <td id="9-29">b</td>
+            <td id="9-30">b</td>
+            <td id="10-1">b</td>
         </tr>
     </table>
     <div class="dropdown">
@@ -56,6 +56,21 @@
           <a href="#">Test</a>
           <a href="#">Project</a>
         </div>
+      </div>
+      <div class="task-creator">
+        <form id="creator">
+            <div for="taskDate" required>
+            <button value="9-28"></button>
+            <button value="9-29"></button>
+            <button value="9-30"></button>
+            <button value="10-1"></button>
+        </div>
+            <input type="text">
+            <input type="submit">
+        </form>
+      </div>
+      <div class="task-destroyer"></div>
+
       </div>
 </body>
 </html>

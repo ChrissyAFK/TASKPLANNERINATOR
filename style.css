@@ -4,6 +4,7 @@ th, td{
     padding-top: 30px;
     padding-bottom: 30px;
     border:lightblue, solid;
+    text-align: center;
 }
 body {
     color: #e7ecef
@@ -30,6 +31,7 @@ div {
   .dropdown {
     position: relative;
     display: inline-block;
+    float:right;
   }
   
 
@@ -59,13 +61,13 @@ div {
   /* Change the background color of the dropdown button when the dropdown content is shown */
   .dropdown:hover .dropbtn {background-color: #3e8e41;}
 
-.days{
+#days{
     font-family: "Itim";
     font-size:30px;
     padding:10px;
     max-width:200px;
 }
-.tasknum{
+#tasknum{
     font-family: "Itim";
     font-size:20px;
     padding:10px;
@@ -75,4 +77,6 @@ div {
     font-weight: 400;
     font-style: normal;
   }
-  
+  .task-creator button{
+    display:inline-block;
+  }
